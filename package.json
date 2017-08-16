@@ -1,0 +1,25 @@
+{
+  "name": "pisco-json-setVersion",
+  "version": "0.0.1",
+  "description": "Write & Save Json version files",
+  "scripts": {
+    "deps": "npm install"
+  },
+  "keywords": [
+    "piscosour-recipe"
+  ],
+  "license": "ISC",
+  "preferGlobal": true,
+  "dependencies": {
+    "pisco-plugin-semver": "^0.1.0",
+    "pisco-plugin-bower": "^0.3.0",
+    "pisco-plugin-npm": "^0.3.0",
+    "pisco-plugin-scm-git": "^0.1.2"
+  },
+  "devDependencies": {
+    "piscosour": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  }
+}

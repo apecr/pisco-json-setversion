@@ -1,0 +1,41 @@
+{
+  "name": "setVersion",
+  "description": "Write version on project json file",
+  "plugins": [
+    "npm",
+    "bower",
+    "scm",
+    "semver"
+  ],
+  "bower": {
+    "installed" : true,
+    "forceLatest" : true,
+    "production" : true
+  },
+  "npmDependencies" : {
+    "updated" : true
+  },
+  "stages" : [ "never" ],
+  "contexts": "*",
+  "jsonFiles": [
+    "bower.json",
+    "package.json"
+  ],
+  "versionStrategies": {
+    "start" : {
+      "feature": ["prerelease", "alpha"],
+      "merger": ["prerelease", "aam"],
+      "release": ["prerelease", "rc"],
+      "hotfix": ["prerelease", "hotfix"],
+      "consolidation": ["#preconsolidate", "consolidate"]
+    },
+    "finish" : {
+      "feature": ["prerelease", "beta"],
+      "merger": ["prerelease", "beta"],
+      "release": ["auto", ""],
+      "consolidation": ["auto", ""],
+      "hotfix": ["auto", ""]
+    }
+  },
+  "versionDescription" : "chore(): change version file:"
+}
